@@ -197,7 +197,7 @@ required>
 
     <option value="1 Tahun">1 Tahun</option>
 
-    <option value="2 Tahun">tempe</option>
+    <option value="2 Tahun">tempe tahu</option>
 
 </select>
 
