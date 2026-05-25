@@ -24,9 +24,6 @@ if(isset($_POST['update'])){
     $paket  = $_POST['paket'];
     $tgl    = $_POST['tanggal'];
 
-    // update waktu edit terakhir
-    $checkin = date('Y-m-d H:i:s');
-
     mysqli_query($koneksi, "
         UPDATE member SET
         nama='$nama',
@@ -229,13 +226,6 @@ label{
         value="<?= $m['tgl_daftar']; ?>">
     </div>
 </div>
-
-<label>Terakhir Check-in</label>
-
-<input type="text"
-class="input"
-value="<?= $m['last_checkin']; ?>"
-readonly>
 
 <button type="submit" name="update" class="btn btn-save">
     Simpan Perubahan

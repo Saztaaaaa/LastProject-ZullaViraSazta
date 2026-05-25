@@ -258,11 +258,6 @@ $statusClass = ($status == 'aktif') ? 'aktif' : 'nonaktif';
         <span><?php echo $m['tgl_daftar']; ?></span>
     </div>
 
-    <div class="row">
-        <span>Check-in</span>
-        <span><?php echo $m['last_checkin'] ?? '-'; ?></span>
-    </div>
-
 </div>
 
 

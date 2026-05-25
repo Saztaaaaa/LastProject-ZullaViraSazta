@@ -19,12 +19,10 @@ if(isset($_POST['simpan'])){
     $paket  = $_POST['paket'];
     $tgl    = $_POST['tanggal'];
 
-    $checkin = date('Y-m-d H:i:s');
-
     mysqli_query($koneksi,"INSERT INTO member 
-    (nama, nik, alamat, no_hp, paket, tgl_daftar, last_checkin, status) 
+    (nama, nik, alamat, no_hp, paket, tgl_daftar, status) 
     VALUES 
-    ('$nama','$nik','$alamat','$no_hp','$paket','$tgl','$checkin','aktif')");
+    ('$nama','$nik','$alamat','$no_hp','$paket','$tgl','aktif')");
 
     header("Location: member.php");
 }
@@ -251,13 +249,6 @@ required>
     </div>
 
 </div>
-
-<label>Terakhir Check-in</label>
-
-<input type="text"
-class="input"
-value="Hari ini, <?= date('H:i:s'); ?>"
-readonly>
 
 <button type="submit"
 name="simpan"
